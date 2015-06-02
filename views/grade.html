@@ -1,0 +1,21 @@
+ <div ng-controller="NavigableTableCtrl">
+	<div class="container">
+					<button class="btn btn-default" ng-click="hideSome = !hideSome">
+						<span ng-show="hideSome">Dobrar Tamanho</span>
+						<span ng-show="!hideSome">Reduzir Tamanho</span>		
+					</button>				
+		</div>		
+
+		<div>
+			<table class="table table-condensed table-striped table-bordered">
+				<tbody ag-navigable-table="{{mode.value}}" ng-repeat="mode in modes" ng-show="mode.show">	
+					<tr ng-repeat="item in items" ng-show="show($index)">
+						
+						<td ng-repeat="item in items" >
+							<input type = "text"/>
+						</td>		
+					</tr>
+			  </tbody>
+			</table>
+		</div>		
+ </div>

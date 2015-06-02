@@ -1,0 +1,20 @@
+  <div ng-controller="MatrizCtrl">
+  	<script type="text/javascript" ng:autobind src="http://code.angularjs.org/0.9.19/angular-0.9.19.js"></script>
+ 	<div class="container">
+ 		<script src="app.js"></script>
+ 		<h1>Matriz Dinamica</h1>
+ 			
+ 			<p>Linha</p>
+ 				<input type="text" placeholder="Digite o tamanho..." ng-model="linha"> 
+ 			
+ 			<p>Coluna</p>
+ 				<input type="text" placeholder="Digite o tamanho..." ng-model="coluna">
+ 				
+ 				<p></p>
+ 					<table border="1" style="background-color:FFFFCC;border-collapse:collapse;border:1px solid FFCC00;color:000000;width:100%" cellpadding="3" cellspacing="3">
+ 						<tr ng-repeat="i in getNumber(linha)">
+ 					   	<td ng-repeat="i in getNumber(coluna)"> <input placeholder="Digite os dados..."> </td>
+ 					</tr>
+ 					</table>
+ 		</div>		
+  </div>

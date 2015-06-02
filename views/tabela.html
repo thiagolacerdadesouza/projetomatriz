@@ -1,0 +1,26 @@
+<h1>Tabela Dinamica</h1>
+  
+  <p>Linha</p>
+    <input type="text" placeholder="Digite o tamanho..."> 
+  
+  <p>Coluna</p>
+    <input type="text" placeholder="Digite o tamanho...">
+    
+    <p></p>
+    <table border="1" cellpadding="0" cellspacing="0">
+        <tr>
+          <td><input name="obenLinks" type="text" onkeydown="myTest(event,undefined,undefined,'mitteLinks','obenMitte')"></td>
+          <td><input name="obenMitte" type="text" onkeydown="myTest(event,undefined,'obenLinks','mitteMitte','obenRechts')"></td>
+          <td><input name="obenRechts" type="text" onkeydown="myTest(event,undefined,'obenMitte','mitteRechts',undefined)"></td>
+        </tr>
+        <tr>
+          <td><input name="mitteLinks" type="text" onkeydown="myTest(event,'obenLinks',undefined,'untenLinks','mitteMitte')"></td>
+          <td><input name="mitteMitte" type="text" onkeydown="myTest(event,'obenMitte','mitteLinks','untenMitte','mitteRechts')"></td>
+          <td><input name="mitteRechts" type="text" onkeydown="myTest(event,'obenRechts','mitteMitte','untenRechts',undefined)"></td>
+        </tr>
+        <tr>
+          <td><input name="untenLinks" type="text" onkeydown="myTest(event,'mitteLinks',undefined,undefined,'untenMitte')"></td>
+          <td><input name="untenMitte" type="text" onkeydown="myTest(event,'mitteMitte','untenLinks',undefined,'untenRechts')"></td>
+          <td><input name="untenRechts" type="text" onkeydown="myTest(event,'mitteRechts','untenMitte',undefined,undefined)"></td>
+        </tr>
+    </table>
